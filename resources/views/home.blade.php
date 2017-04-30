@@ -94,6 +94,11 @@
 				<div class="col-md-2 gambar">
 					<a href="{{ URL::to('http://canvasgarment.com') }}"><img class="logo" src="{{ url('logo.png') }}"></a>
 				</div>
+				@if (Auth::check())
+					<div class="col-md-10 menu">
+						<a href="{{ url('/admin') }}" class="btn btn-info">Dashboard Admin</a>
+					</div>
+				@endif
 			</div>
 			<div class="col-md-12 isiForm">
 				<div class="col-md-3"></div>
